@@ -49,7 +49,7 @@ class Counter {
    * @param {number} initialNumber - the initial state of the count
    */
   constructor(initialNumber) {
-    // ✨ initialize whatever properties are needed
+    let counter = initialNumber
   }
 
   /**

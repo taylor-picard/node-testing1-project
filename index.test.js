@@ -31,9 +31,15 @@ describe('[Exercise 2] trimPropertiesMutation', () => {
 
 describe('[Exercise 3] findLargestInteger', () => {
   test('[5] returns the largest number in an array of objects { integer: 2 }', () => {
-    const array = [{integer: 2}, {integer: 4}, {integer: 12}, {integer: 1}, {integer: 8}]
-    const largest = utils.findLargestInteger(array)
-    expect(largest).toBe(12)
+    const array1 = [{integer: 2}, {integer: 4}, {integer: 12}, {integer: 1}, {integer: 8}]
+    const array2 = [{integer: 3}, {integer: 4}, {integer: 12}, {integer: 18}, {integer: 8}]
+    const array3 = [{integer: 2}, {integer: 16}, {integer: 1}, {integer: 11}, {integer: 28}]
+    const largest1 = utils.findLargestInteger(array1)
+    const largest2 = utils.findLargestInteger(array2)
+    const largest3 = utils.findLargestInteger(array3)
+    expect(largest1).toBe(12)
+    expect(largest2).toBe(18)
+    expect(largest3).toBe(28)
   })
 })
 
@@ -42,7 +48,10 @@ describe('[Exercise 4] Counter', () => {
   beforeEach(() => {
     counter = new utils.Counter(3) // each test must start with a fresh couter
   })
-  // test('[6] the FIRST CALL of counter.countDown returns the initial count', () => {})
+  test('[6] the FIRST CALL of counter.countDown returns the initial count', () => {
+    const initial = 3
+    expect(counter).toEqual(initial)
+  })
   // test('[7] the SECOND CALL of counter.countDown returns the initial count minus one', () => {})
   // test('[8] the count eventually reaches zero but does not go below zero', () => {})
 })
