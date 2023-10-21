@@ -138,9 +138,9 @@ class Car {
       this.milesTilEmpty = this.milesTilEmpty - distance
       this.tank = this.tank - (distance / this.mpg)
     } else {
+      this.odometer = this.odometer + this.milesTilEmpty
       this.tank = 0
       this.milesTilEmpty = 0
-      this.odometer = this.odometer + this.milesTilEmpty
     }
     return this.odometer
   }
@@ -157,9 +157,14 @@ class Car {
    * focus.refuel(99) // returns 600 (tank only holds 20)
    */
   refuel(gallons) {
-    // ✨ implement
+    if(this.tank < 20){
+      this.tank = 
+    }
   }
 }
+// const focus = new Car('focus', 20, 30)
+// focus.drive(600)
+// focus.drive(1)
 
 /**
  * [Exercise 7] Asynchronously resolves whether a number is even
